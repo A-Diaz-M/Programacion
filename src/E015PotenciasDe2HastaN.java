@@ -15,5 +15,4 @@ void main() {
 
     if (exponente < 0) resultado = 1/resultado;
 
-    System.out.format("%s, su potencia %.0f^%.0f es %.5f\n", nombre, base, exponente, resultado);
 }
