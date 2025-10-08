@@ -1,7 +1,7 @@
 void main() {
     char letra = Character.toLowerCase( IO.readln("--Hola, introduzca 's' para iniciar el programa o 'n' para cancelar.--\n").charAt(0));
 
-    while ((letra != 'n')&&(letra != 's')){
+    while (letra != 'n' && letra != 's'){
         letra = Character.toLowerCase(IO.readln("--Porfavor, introduzca 's' para iniciar el programa o 'n' para cancelar.--\n").charAt(0));
     }
 
