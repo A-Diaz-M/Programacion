@@ -1,5 +1,4 @@
 void main() {
-
     IO.println("MULTIPLICACIÓN SIMPLE CON NEGATIVOS");
     String nombre = IO.readln("Dime como te llamas:\n");
 
