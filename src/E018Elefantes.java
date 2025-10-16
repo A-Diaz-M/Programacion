@@ -13,10 +13,10 @@ void main() {
         if (i > 1){
             frase1 = "elefantes";
             frase2 = "balanceaban";
-            if (i > num * 0.75){
-                frase1 = "ELEFANTES";
-                frase2 = "BALANCEABAN";
-            }
+        }
+        if (i > num * 0.75){
+            frase1 = "ELEFANTES";
+            frase2 = "BALANCEABAN";
         }
         System.out.format("Había una vez %d %s que se %s en una hamaca a la orilla de un río...\n", i, frase1, frase2);
     }

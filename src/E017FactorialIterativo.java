@@ -8,9 +8,7 @@ void main() {
     int a = Math.abs(num);
 
     for (int i = 1; i <= a; i++){
-
         base = i * base;
-
     }
 
     if (num < 0 ) {
