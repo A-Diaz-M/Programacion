@@ -1,5 +1,4 @@
 void main() {
-
     String nombre = IO.readln("Dime como te llamas:\n");
 
     int cantidad = Integer.parseInt(IO.readln("¿Cuántos números desea sumar?\n"));

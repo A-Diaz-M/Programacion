@@ -1,5 +1,4 @@
 void main() {
-
    IO.println("1 al 10 con FOR");
    for (int i = 1; i <= 10; i++) {
        IO.print(i+" ");

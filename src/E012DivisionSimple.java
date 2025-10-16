@@ -1,5 +1,4 @@
 void main() {
-
     IO.println("DIVISIONES");
     String nombre = IO.readln("Dime como te llamas:\n");
 
