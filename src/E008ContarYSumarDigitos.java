@@ -4,7 +4,12 @@ void main() {
 
     String nombre = IO.readln("Dime como te llamas:\n").toUpperCase();
 
-    int num = Integer.parseInt(IO.readln(nombre+", que numero quieres que sume sus cifras?\n"));
+    int num;
+
+    do{
+        num = Integer.parseInt(IO.readln(nombre+", que numero quieres que sume sus cifras?\n"));
+    } while(num <= 0);
+
     int suma = 0;
     int numeroInicial = num;
     int digitos = 0;
@@ -15,5 +20,6 @@ void main() {
         num = num / 10;
         digitos++;
     }
-    System.out.format("%s, la suma total del numero %d es: %d, y tiene: %d digitos.\n", nombre, numeroInicial, suma, digitos);
+    String resultado = String.format("%s, la suma total del numero %d es: %d, y tiene: %d digitos.\n", nombre, numeroInicial, suma, digitos);
+    IO.println(resultado);
 }

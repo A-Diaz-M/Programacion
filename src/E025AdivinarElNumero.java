@@ -11,6 +11,8 @@ void main() {
     int numAdivinar;
     int numIntentos = 5;
 
+    IO.println("\n\n\n\n\n\n\n\n\n");
+
     do {
         numAdivinar = Integer.parseInt(IO.readln("Jugador 2, introduzca el numero a adivinar:\n"));
         if (numAdivinar > numSecreto) {

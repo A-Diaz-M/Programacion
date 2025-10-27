@@ -4,7 +4,12 @@ void main() {
 
     String nombre = IO.readln("Dime como te llamas:\n").toUpperCase();
 
-    int num = Integer.parseInt(IO.readln(nombre+", que numero quieres al revesy sumar sus digitos?\n"));
+    int num;
+
+    do{
+        num = Integer.parseInt(IO.readln(nombre+", que numero quieres al revesy sumar sus digitos?\n"));
+    } while(num <= 0);
+
     int numInicial = num;
     int resultado = 0;
     int resto;
@@ -14,10 +19,8 @@ void main() {
     while (num > 0) {
         resto = num % 10;
         suma+=resto;
-        if (num < 10) {
-            resultado+=resto;
-        } else {
-            resultado+=resto;
+        resultado+=resto;
+        if (num >= 10) {
             resultado = resultado * 10;
         }
         num = num / 10;
