@@ -8,6 +8,8 @@ void multiplicacion (int num) {
 
 void main() {
     IO.println("TABLA DE MULTIPLICAR");
+    IO.println("Introduzca un numero y le dire su tabla de multiplicar del 0 al 10.\n");
+
     String nombre = IO.readln("Dime como te llamas:\n").toUpperCase();
 
     int num = Integer.parseInt(IO.readln(nombre+", introduzca un numero:\n"));
