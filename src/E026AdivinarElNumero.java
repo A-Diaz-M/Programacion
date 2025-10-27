@@ -14,7 +14,7 @@ void main() {
     int numAdivinar;
     int numIntentos = 5;
     int diferencia;
-    String temperatura = "";
+    String temperatura;
     String jugador2 = IO.readln("Dime como te llamas jugador 2:\n").toUpperCase();
 
     do {
