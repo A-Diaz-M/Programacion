@@ -6,9 +6,12 @@ void main() {
     int num1 = Integer.parseInt(IO.readln(nombre + ", desde que numero quieres ver los multiplos de 3?\n"));
     int num2 = Integer.parseInt(IO.readln(nombre + ", hasta que numero quieres ver los multiplos de 3?\n"));
 
-    for (int i = num1; i <= num2; i++) {
-        if (i % 3 == 0) {
-            IO.println(i);
-        }
+
+    while (num1 % 3 != 0) {
+        num1++;
+    }
+
+    for (int i = num1; i <= num2; i = i+3) {
+        IO.println(i);
     }
 }
