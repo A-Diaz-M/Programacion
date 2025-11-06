@@ -1,21 +1,15 @@
-void esPrimo(int vueltas) {
-    for (int i = 1; i <= vueltas; i++) {
-
-        if (i == 1) {
-            IO.println(i+", no es primo");
-        } else if (i == 2 || i == 3 || i == 5 || i == 7) {
-            IO.println(i+", es primo");
-        } else if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0){
-            IO.println(i+", es primo");
-        } else {
-            IO.println(i+", no es primo");
-        }
-    }
+boolean esDivisible (int dividendo, int divisor) {
+    return dividendo % divisor == 0;
 }
 
+boolean esPrimo(int numero) {
 
-
-
+    if (numero == 1) return false;
+    for (int i = 2; i <= numero-1; i++) {
+        if (esDivisible(numero,i)) return false;
+    }
+    return true;
+}
 
 void main() {
     IO.println("ES PRIMO");
@@ -24,5 +18,11 @@ void main() {
 
     int vueltas = Integer.parseInt(IO.readln(nombre + ", hasta que numeros quieres saber si son primos o no?\n"));
 
-   esPrimo(vueltas);
+    for (int i = 1; i <= vueltas; i++) {
+        if (esPrimo(i)){
+            IO.println(i+" es primo.");
+        } else {
+            IO.println(i+" no es primo.");
+        }
+    }
 }
