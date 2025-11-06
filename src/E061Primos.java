@@ -15,13 +15,16 @@ void main() {
     IO.println("Introduzca dividendo y un divisor y se dira si es divisible.\n");
     String nombre = IO.readln("Dime como te llamas:\n").toUpperCase();
 
-    int vueltas = Integer.parseInt(IO.readln(nombre + ", hasta que numeros quieres saber si son primos o no?\n"));
+    int vueltas = Integer.parseInt(IO.readln(nombre + ", cuantos numeros primos quieres?\n"));
+    int contadorPrimos = 0;
+    int num = 1;
 
-    for (int i = 1; i <= vueltas; i++) {
-        if (esPrimo(i)){
-            IO.println(i+" es primo.");
-        } else {
-            IO.println(i+" no es primo.");
+    while (contadorPrimos < vueltas) {
+        if (esPrimo(num)){
+            IO.println(num);
+            contadorPrimos++;
         }
+        num++;
     }
+
 }
