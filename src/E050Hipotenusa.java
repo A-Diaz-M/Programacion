@@ -1,9 +1,6 @@
 double calcularHipotenusa(double cateto1, double cateto2) {
-
     return Math.sqrt(Math.pow(cateto1, 2)+Math.pow(cateto2,2));
 }
-
-
 
 void main() {
     IO.println("HIPOTENUSA");
