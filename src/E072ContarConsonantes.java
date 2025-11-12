@@ -6,7 +6,9 @@ int contarConsonantes(String texto) {
 
     for (int i = 0; i < texto.length(); i++) {
         char c = texto.charAt(i);
-        if (c >= 'b' && c <= 'z' && c != 'e' && c != 'i' && c != 'o' && c != 'u' || c == 'ñ') cont++;
+        if (c >= 'b' && c <= 'z' && c != 'e' && c != 'i' && c != 'o' && c != 'u'){
+            cont++;
+        }
     }
     return cont;
 }
@@ -29,9 +31,9 @@ int contarVocales(String texto) {
 void main() {
     IO.println("CONTAR CONSONANTES Y VOCALES");
     IO.println("Introduzca una frase y se dira cuantas consonantes tiene y vocales.\n");
-    String nombre = IO.readln("Dime como te llamas:\n").toUpperCase();
+    String nombre = IO.readln("Dime como te llamas:\n").toLowerCase();
 
-    String s = IO.readln(nombre + ", introduzca una frase:\n").toLowerCase();
+    String s = String.format(IO.readln(nombre + ", introduzca una frase:\n"));
 
     IO.println();
     IO.println(String.format("La cantidad total de consonantes es de %d y de vocales de %d", contarConsonantes(s), contarVocales(s)));
