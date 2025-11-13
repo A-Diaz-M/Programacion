@@ -7,8 +7,6 @@ String numero (int num) {
     };
 }
 
-
-
 void main() {
     IO.println("DÍAS DE UN MES");
     IO.println("Introduzca un numero y se dira cuantos dias tiene el mes.\n");
