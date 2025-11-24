@@ -14,6 +14,6 @@ void main() {
 
     double base = Integer.parseInt(IO.readln(nombre + ", introduzca la base.\n"));
     int exponente = Integer.parseInt(IO.readln(nombre + ", introduzca el exponente.\n"));
-    IO.println(String.format("%s, %.0f^%d = %.2f", nombre, base, exponente, calcularPotencia(base,exponente)));
+    IO.println(String.format("%s, %.0f^%d = %.2f", nombre, base, exponente, calcularPotencia(base, exponente)));
 
 }

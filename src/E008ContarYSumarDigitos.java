@@ -6,9 +6,9 @@ void main() {
 
     int num;
 
-    do{
-        num = Integer.parseInt(IO.readln(nombre+", que numero quieres que sume sus cifras?\n"));
-    } while(num <= 0);
+    do {
+        num = Integer.parseInt(IO.readln(nombre + ", que numero quieres que sume sus cifras?\n"));
+    } while (num <= 0);
 
     int suma = 0;
     int numeroInicial = num;
@@ -16,7 +16,7 @@ void main() {
 
     while (num > 0) {
         int resto = num % 10;
-        suma+=resto;
+        suma += resto;
         num = num / 10;
         digitos++;
     }

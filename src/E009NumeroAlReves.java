@@ -6,9 +6,9 @@ void main() {
 
     int num;
 
-    do{
-        num = Integer.parseInt(IO.readln(nombre+", que numero quieres al revesy sumar sus digitos?\n"));
-    } while(num <= 0);
+    do {
+        num = Integer.parseInt(IO.readln(nombre + ", que numero quieres al revesy sumar sus digitos?\n"));
+    } while (num <= 0);
 
     int numInicial = num;
     int resultado = 0;
@@ -18,8 +18,8 @@ void main() {
 
     while (num > 0) {
         resto = num % 10;
-        suma+=resto;
-        resultado+=resto;
+        suma += resto;
+        resultado += resto;
         if (num >= 10) {
             resultado = resultado * 10;
         }

@@ -7,8 +7,8 @@ void main() {
 
     int resultado = 0;
 
-    for (int i = 0;i != b;i++) {
-        resultado+=a;
+    for (int i = 0; i != b; i++) {
+        resultado += a;
     }
-    System.out.format("%s, la multiplicacion de %d x %d = %d",nombre, a, b, resultado);
+    System.out.format("%s, la multiplicacion de %d x %d = %d", nombre, a, b, resultado);
 }

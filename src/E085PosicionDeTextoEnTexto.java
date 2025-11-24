@@ -4,7 +4,8 @@ int encuentraPosicionEnElTexto(String textoBuscado, String textoPrincipal) {
 
         for (int j = 0; j < textoBuscado.length(); j++) {
             if (textoBuscado.charAt(j) != textoPrincipal.charAt(i + j)) {
-                coincide = false; break;
+                coincide = false;
+                break;
             }
         }
         if (coincide) return i;
@@ -20,9 +21,9 @@ void main() {
     String principal = IO.readln(nombre + ", introduzca la frase principal:\n");
     String buscador = IO.readln(nombre + ", introduzca la frase que sera buscada:\n");
 
-    if (encuentraPosicionEnElTexto(buscador,principal) > -1) {
+    if (encuentraPosicionEnElTexto(buscador, principal) > -1) {
         IO.println(String.format("%s, la frase buscada esta en la posicion %d", nombre, encuentraPosicionEnElTexto(buscador, principal)));
-    } else  {
+    } else {
         IO.println(String.format("%s, la frase buscada no esta en la principal", nombre));
     }
 }

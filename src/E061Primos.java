@@ -1,11 +1,11 @@
-boolean esDivisible (int dividendo, int divisor) {
+boolean esDivisible(int dividendo, int divisor) {
     return dividendo % divisor == 0;
 }
 
 boolean esPrimo(int numero) {
     if (numero == 1) return false;
-    for (int i = 2; i <= numero-1; i++) {
-        if (esDivisible(numero,i)) return false;
+    for (int i = 2; i <= numero - 1; i++) {
+        if (esDivisible(numero, i)) return false;
     }
     return true;
 }
@@ -20,7 +20,7 @@ void main() {
     int num = 1;
 
     while (contadorPrimos < vueltas) {
-        if (esPrimo(num)){
+        if (esPrimo(num)) {
             IO.println(num);
             contadorPrimos++;
         }

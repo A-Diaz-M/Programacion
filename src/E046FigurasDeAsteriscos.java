@@ -7,9 +7,9 @@ void main() {
     int num = Integer.parseInt(IO.readln(nombre + ", de que altura quieres el rectangulo?\n"));
     int num2 = Integer.parseInt(IO.readln(nombre + ", de que anchura quieres el rectangulo?\n"));
 
-    for (int i = 1; i <= num; i++){
-        for (int j = 1; j < num2; j++){
-            if (i == 1 || i == num || j == 1 ){
+    for (int i = 1; i <= num; i++) {
+        for (int j = 1; j < num2; j++) {
+            if (i == 1 || i == num || j == 1) {
                 IO.print(("* "));
 
             } else {

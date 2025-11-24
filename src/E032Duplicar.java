@@ -1,8 +1,8 @@
-int duplicar (int num){
+int duplicar(int num) {
     return 2 * num;
 }
 
-void main(){
+void main() {
     int doble = duplicar(20);
     IO.println(doble);
 }

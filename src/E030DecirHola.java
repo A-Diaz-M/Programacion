@@ -2,6 +2,6 @@ void Utilidades() {
     System.out.println("¡Hola!");
 }
 
-void main(){
+void main() {
     Utilidades();
 }

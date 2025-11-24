@@ -1,7 +1,7 @@
-StringBuilder alReves (String texto) {
+StringBuilder alReves(String texto) {
     StringBuilder reves = new StringBuilder();
 
-    for (int i = texto.length() - 1; i >= 0 ; i--) {
+    for (int i = texto.length() - 1; i >= 0; i--) {
         char letra = texto.charAt(i);
         reves.append(letra);
     }
@@ -19,11 +19,11 @@ void main() {
 
     String palabra = IO.readln(nombre + ", introduzca una frase:\n");
 
-   if (esPalindromo(palabra, String.valueOf(alReves(palabra)))) {
-       IO.println("Es palindroma");
-   } else {
-       IO.println("No es palindroma");
-   }
+    if (esPalindromo(palabra, String.valueOf(alReves(palabra)))) {
+        IO.println("Es palindroma");
+    } else {
+        IO.println("No es palindroma");
+    }
     IO.println(String.format("%s, la frase '%s' al reves es '%s'", nombre, palabra, alReves(palabra)));
 }
 

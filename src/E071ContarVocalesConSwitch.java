@@ -7,7 +7,7 @@ int contarVocales(String texto) {
     for (int i = 0; i < texto.length(); i++) {
         char c = texto.charAt(i);
         switch (c) {
-            case 'a', 'e' , 'i', 'o', 'u' -> cont++;
+            case 'a', 'e', 'i', 'o', 'u' -> cont++;
         }
     }
     return cont;

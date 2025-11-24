@@ -9,8 +9,11 @@ void main() {
 
     do {
         num = Integer.parseInt(IO.readln(nombre + ", introduce un numero o pulse '0' para parar.\n"));
-        if (num > 0) { media+=num; cantidadNumeros++; }
+        if (num > 0) {
+            media += num;
+            cantidadNumeros++;
+        }
     } while (num != 0);
 
-    IO.println(String.format("%s, la media aritmetica es %.2f", nombre, media/cantidadNumeros));
+    IO.println(String.format("%s, la media aritmetica es %.2f", nombre, media / cantidadNumeros));
 }

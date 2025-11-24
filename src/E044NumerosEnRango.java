@@ -11,7 +11,7 @@ void main() {
         num1++;
     }
 
-    for (int i = num1; i <= num2; i = i+3) {
+    for (int i = num1; i <= num2; i = i + 3) {
         IO.println(i);
     }
 }

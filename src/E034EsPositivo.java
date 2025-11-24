@@ -4,7 +4,7 @@ boolean esPositivo(int num) {
 
 void main() {
     int num = Integer.parseInt(IO.readln("Introduzca un numero:\n"));
-    if (esPositivo(num)){
+    if (esPositivo(num)) {
         IO.println("es positivo");
     } else {
         IO.println("es negativo");

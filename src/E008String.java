@@ -4,7 +4,7 @@ void main() {
 
     String nombre = IO.readln("Dime como te llamas:\n").toUpperCase();
 
-    String numero = IO.readln(nombre+", dime un numero:\n");
+    String numero = IO.readln(nombre + ", dime un numero:\n");
     int suma = 0;
 
     int digitos = 0;

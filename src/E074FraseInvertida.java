@@ -6,7 +6,7 @@ void main() {
     String palabra = IO.readln(nombre + ", introduzca una frase:\n");
     StringBuilder reves = new StringBuilder();
 
-    for (int i = palabra.length() - 1; i >= 0 ; i--) {
+    for (int i = palabra.length() - 1; i >= 0; i--) {
         char letra = palabra.charAt(i);
         reves.append(letra);
     }

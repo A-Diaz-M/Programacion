@@ -9,15 +9,15 @@ void main() {
     int numActual = Integer.parseInt(IO.readln(", introduzca un numero:\n"));
 
     while (numActual != 0) {
-        if (numActual < numAnt){
+        if (numActual < numAnt) {
             IO.println("Es menor que el anterior.\n");
-        } else if (numActual > numAnt){
+        } else if (numActual > numAnt) {
             IO.println("Es mayor que el anterior.\n");
         } else {
             IO.println("Es igual que el anterior.\n");
         }
         numAnt = numActual;
-        numActual = Integer.parseInt(IO.readln(nombre+", introduzca otro numero:\n"));
+        numActual = Integer.parseInt(IO.readln(nombre + ", introduzca otro numero:\n"));
     }
     System.out.format("Gracias por usar mi programa %s.\n", nombre);
 }

@@ -1,4 +1,4 @@
-void dibujarOla (int num) {
+void dibujarOla(int num) {
     for (int j = 1; j <= num; j++) {
         IO.println("*".repeat(j));
     }
@@ -8,7 +8,7 @@ void dibujarOla (int num) {
     }
 }
 
-void dibujarOlas (int numOla, int numAmplitud) {
+void dibujarOlas(int numOla, int numAmplitud) {
     for (int i = 0; i < numOla; i++) {
         dibujarOla(numAmplitud);
     }
@@ -23,7 +23,7 @@ void main() {
     do {
         numOlas = Integer.parseInt(IO.readln(nombre + ", introduzca un numero de olas:\n"));
         amplitudMax = Integer.parseInt(IO.readln(nombre + ", introduzca un numero de altura de las olas:\n"));
-        if (numOlas < 0) IO.println("No puedes poner cantidad de olas negativas") ;
+        if (numOlas < 0) IO.println("No puedes poner cantidad de olas negativas");
         if (amplitudMax < 0) IO.println("No puedes poner amplitud maxima");
     } while (numOlas < 0 && amplitudMax < 0);
 
