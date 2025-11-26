@@ -43,9 +43,9 @@ void main() {
     MesAnno mes = MesAnno.valueOf(texto);
 
     String estacion = switch (mes) {
-        case diciembre, enero, febrero -> "Invierno";
-        case marzo, abril, mayo -> "Primavera";
-        case junio, julio, agosto -> "Verano";
+        case diciembre,  enero,   febrero   -> "Invierno";
+        case marzo,      abril,   mayo      -> "Primavera";
+        case junio,      julio,   agosto    -> "Verano";
         case septiembre, octubre, noviembre -> "Otoño";
     };
     IO.println(String.format("%s, el mes %s esta en %s.\n\n", nombre, texto, estacion));
