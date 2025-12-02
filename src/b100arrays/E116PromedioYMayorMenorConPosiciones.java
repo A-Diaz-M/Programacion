@@ -12,7 +12,6 @@ void main() {
         num = Integer.parseInt(IO.readln(nombre + ", cuantos numeros quieres?\n"));
     } while (num < 2);
 
-
     int[] valores = new int[num];
 
     for (int i = 0; i < valores.length; i++) {
@@ -30,8 +29,6 @@ void main() {
             posMenor = i + 1;
         }
     }
-
-
     IO.println(String.format("%s, el promedio es %.1f", nombre, sumaTotal / valores.length));
     IO.println(String.format("%s, el mayor %d (posición %d) y el menor era %d (posición %d).", nombre, numMayor, posMayor, numMenor, posMenor));
 }

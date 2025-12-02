@@ -22,6 +22,5 @@ void main() {
 
     } else if (mediaPonderada < 5 && aprobado == false) {
         IO.println(String.format("El alumno ha suspendido con %.2f ya que no tiene todo con mas de 4.0 y no llega al 5.0 de media", mediaPonderada));
-
     }
 }
