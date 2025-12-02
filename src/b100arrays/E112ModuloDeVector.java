@@ -6,8 +6,5 @@ void main() {
     for (double valor : vectores){
         sumaTotal+= Math.pow(valor,2);
     }
-
-    sumaTotal = Math.sqrt(sumaTotal);
-
-    IO.println(sumaTotal);
+    IO.println(Math.sqrt(sumaTotal));
 }

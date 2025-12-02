@@ -1,12 +1,12 @@
 void main() {
-
     String nombre = IO.readln("Dime como te llamas:\n").toUpperCase();
+
     int num;
     double sumaTotal = 0;
     int numMayor = Integer.MIN_VALUE;
-    int posMayor = 0;
+    int posMayor = Integer.MIN_VALUE;
     int numMenor = Integer.MAX_VALUE;
-    int posMenor = 0;
+    int posMenor = Integer.MAX_VALUE;
 
     do {
         num = Integer.parseInt(IO.readln(nombre + ", cuantos numeros quieres?\n"));

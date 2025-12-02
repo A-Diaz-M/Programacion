@@ -1,6 +1,6 @@
 void main() {
-    double[] calificaciones = {5.7, 9.5, 4.9, 0.0, 7.75};
-    double[] pesos = {0.15, 0.20, 0.25, 0.30, 0.10};
+    double[] calificaciones = {5.7 , 9.5 , 4.9 , 0.0 , 7.75};
+    double[] pesos          = {0.15, 0.20, 0.25, 0.30, 0.10};
     double mediaPonderada = 0;
     boolean aprobado = true;
 
@@ -11,7 +11,7 @@ void main() {
         }
     }
 
-    if (aprobado) {
+    if (mediaPonderada >= 5 && aprobado) {
         IO.println(String.format("El alumno ha aprobado con %.2f", mediaPonderada));
 
     } else if (mediaPonderada >= 5 && aprobado == false) {
