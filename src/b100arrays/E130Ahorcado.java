@@ -1,3 +1,48 @@
+void imprimirAhorcado(int fallos) {
+    System.out.println(" ____");
+
+    switch (fallos) {
+        case 0 -> {
+            System.out.println(" |  ");
+            System.out.println(" |");
+            System.out.println(" |");
+        }
+        case 1 -> {
+            System.out.println(" |  0");
+            System.out.println(" |");
+            System.out.println(" |");
+        }
+        case 2 -> {
+            System.out.println(" |  0");
+            System.out.println(" |  |");
+            System.out.println(" |");
+        }
+        case 3 -> {
+            System.out.println(" |  0");
+            System.out.println(" | -|");
+            System.out.println(" |");
+        }
+        case 4 -> {
+            System.out.println(" |  0");
+            System.out.println(" | -|-");
+            System.out.println(" |");
+        }
+        case 5 -> {
+            System.out.println(" |  0");
+            System.out.println(" | -|-");
+            System.out.println(" | /");
+        }
+        case 6 -> {
+            System.out.println(" |  0");
+            System.out.println(" | -|-");
+            System.out.println(" | / \\ ");
+        }
+    }
+    System.out.println("_|_");
+    System.out.println();
+}
+
+
 void main() {
     String nombre = IO.readln("Dime como te llamas:\n").toUpperCase();
 
@@ -10,12 +55,17 @@ void main() {
         array[i] = IO.readln(nombre + ", introduzca una letra:\n").charAt(0);
     }
 
-    IO.println("\n--- JUGADOR 2 ---\n");
+    IO.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
+    IO.println("\n--- JUGADOR 2 ---\n");
     String nombre2 = IO.readln("Dime como te llamas:\n").toUpperCase();
-    int intentos = 0;
+
+    int intentos = 6;
+    int fallos = 0;
+
     boolean todasAcertadas;
-    IO.println(String.format("Tienes %d intentos.", intentos));
+
+    IO.println(String.format("\nTienes %d intentos.", intentos));
 
     do {
         IO.print("Progreso: ");
@@ -25,46 +75,9 @@ void main() {
             } else {
                 IO.print("_ ");
             }
-            IO.println("");
-
-            System.out.println(" ____");
-
-            switch (intentos) {
-                case 1 -> {
-                    System.out.println(" |  0");
-                    System.out.println(" |");
-                    System.out.println(" |");
-                }
-                case 2 -> {
-                    System.out.println(" |  0");
-                    System.out.println(" |  |");
-                    System.out.println(" |");
-                }
-                case 3 -> {
-                    System.out.println(" |  0");
-                    System.out.println(" | -|");
-                    System.out.println(" |");
-                }
-                case 4 -> {
-                    System.out.println(" |  0");
-                    System.out.println(" | -|-");
-                    System.out.println(" |");
-                }
-                case 5 -> {
-                    System.out.println(" |  0");
-                    System.out.println(" | -|-");
-                    System.out.println(" | /");
-                }
-                case 6 -> {
-                    System.out.println(" |  0");
-                    System.out.println(" | -|-");
-                    System.out.println(" | / \\ ");
-                }
-            }
-            System.out.println("_|_");
-            System.out.println();
         }
 
+        IO.println("");
         char letraComprobada = IO.readln(nombre2 + ", introduce una letra:\n").charAt(0);
 
         boolean encontrada = false;
@@ -77,11 +90,16 @@ void main() {
         }
 
         if (encontrada) {
-            IO.println("LETRA ENCONTRADA.");
+            IO.println("\n\nLETRA ENCONTRADA.");
+            imprimirAhorcado(fallos);
+
         } else {
-            IO.println("Letra no encontrada.");
-            intentos++;
+            IO.println("\n\nLetra no encontrada.");
+            intentos--;
+            fallos++;
             IO.println("Intentos: " + intentos);
+
+            imprimirAhorcado(fallos);
         }
 
         todasAcertadas = true;
@@ -94,48 +112,12 @@ void main() {
 
     } while (intentos > 0 && !todasAcertadas);
 
-    if (intentos == 6) {
+    if (intentos == 0) {
         IO.println("GAME OVER");
     } else {
         IO.println("\n¡Muy bien! Has adivinado todas las letras:");
         for (char c : array) {
             IO.print(c + " ");
         }
-        System.out.println(" ____");
-
-        switch (intentos) {
-            case 1 -> {
-                System.out.println(" |  0");
-                System.out.println(" |");
-                System.out.println(" |");
-            }
-            case 2 -> {
-                System.out.println(" |  0");
-                System.out.println(" |  |");
-                System.out.println(" |");
-            }
-            case 3 -> {
-                System.out.println(" |  0");
-                System.out.println(" | -|");
-                System.out.println(" |");
-            }
-            case 4 -> {
-                System.out.println(" |  0");
-                System.out.println(" | -|-");
-                System.out.println(" |");
-            }
-            case 5 -> {
-                System.out.println(" |  0");
-                System.out.println(" | -|-");
-                System.out.println(" | /");
-            }
-            case 6 -> {
-                System.out.println(" |  0");
-                System.out.println(" | -|-");
-                System.out.println(" | / \\ ");
-            }
-        }
-        System.out.println("_|_");
-        System.out.println();
     }
 }
