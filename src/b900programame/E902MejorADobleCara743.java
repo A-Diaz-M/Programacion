@@ -14,8 +14,7 @@ public class E902MejorADobleCara743 {
 
             for (int i = 0; i < documentos; i++) {
                 int caras = teclado.nextInt();
-                int hojasDobleCara = (caras + 1) / 2;
-                ahorrados += caras - hojasDobleCara;
+                ahorrados += caras / 2;
             }
             System.out.println(ahorrados);
         }
