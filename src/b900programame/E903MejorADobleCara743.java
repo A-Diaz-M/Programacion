@@ -2,7 +2,7 @@ package b900programame;
 
 import java.util.Scanner;
 
-public class E902MejorADobleCara743 {
+public class E903MejorADobleCara743 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 

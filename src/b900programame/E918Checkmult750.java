@@ -2,7 +2,7 @@ package b900programame;
 
 import java.util.Scanner;
 
-public class E904Checkmult750 {
+public class E918Checkmult750 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

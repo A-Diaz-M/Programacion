@@ -2,7 +2,7 @@ package b900programame;
 
 import java.util.Scanner;
 
-public class E902Anillamiento764 {
+public class E905Anillamiento764 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int campanna;
