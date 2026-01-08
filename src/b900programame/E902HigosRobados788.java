@@ -2,7 +2,7 @@ package b900programame;
 
 import java.util.Scanner;
 
-public class E903HigosRobados788 {
+public class E902HigosRobados788 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int casos = teclado.nextInt();
