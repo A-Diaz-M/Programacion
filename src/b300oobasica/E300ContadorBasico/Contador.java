@@ -7,6 +7,18 @@ public class Contador {
     private int valor = 0;
     private String etiqueta;
 
+    public Contador () {
+        setValor(MIN);
+    }
+
+    public Contador (int valor){
+        setValor(valor);
+    }
+
+    public String toString (){
+        return "valgo " + valor;
+    }
+
     public int getValor() {
         return valor;
     }

@@ -2,17 +2,16 @@ package b300oobasica.E300ContadorBasico;
 
 public class Principal {
     static void main(String[] args) {
-        Contador c = new Contador();
-        c.incrementar(150);
-        IO.println(c.getValor());
+        Contador c = new Contador(23000);
+        c.incrementar(1);
+        c.incrementar(1);
+        c.decrementar(1);
+        IO.println(c);
 
-        c.decrementar(500);
-        IO.println(c.getValor());
-
-        c.setValor(180);
-        IO.println(c.getValor());
-
-        c.setValor(-180);
-        IO.println(c.getValor());
+        Contador c2 = new Contador();
+        c2.incrementar(1);
+        c2.incrementar(1);
+        c2.decrementar(1);
+        IO.println(c2.getValor());
     }
 }
