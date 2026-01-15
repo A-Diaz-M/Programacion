@@ -1,28 +1,64 @@
 package b300oobasica.E305RelojHMBasico;
 
 public class Reloj {
-    public Reloj(int i) {
-    }
-
-    public Reloj(int i, int i1) {
-    }
+    int horas;
+    int minutos;
 
     public Reloj() {
+        conversor(495);
+    }
 
+    public Reloj(int totalMinutos) {
+        conversor(totalMinutos);
+    }
+
+    public Reloj(int h, int m) {
+        conversor((h * 60) + m);
+    }
+
+    public void conversor(int minutosTotales) {
+        horas = minutosTotales / 60;
+        minutos = minutosTotales % 60;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Formato 24h: %02d:%02d", horas, minutos);
     }
 
     public void tick() {
+        sumarMinutos(1);
     }
 
-    public void sumarMinutos(int i) {
+    public void sumarMinutos(int m) {
+        int totalMinutos = horas * 60 + minutos;
+        totalMinutos += m;
+
+        totalMinutos = totalMinutos % 1440;
+
+        conversor(totalMinutos);
     }
 
-    public void restarMinutos(int i) {
+    public void restarMinutos(int m) {
+        int totalMinutos = horas * 60 + minutos;
+        totalMinutos -= m;
+
+        totalMinutos = ((totalMinutos % 1440) + 1440) % 1440;
+
+        conversor(totalMinutos);
     }
 
-    public int diferenciaMinutos(Reloj reloj3) {
+    public int diferenciaMinutos(Reloj reloj) {
+        int thisMinutos = this.horas * 60 + this.minutos;
+        int otroMinutos = reloj.horas * 60 + reloj.minutos;
+
+        return thisMinutos - otroMinutos;
     }
 
-    public Reloj diferenciaReloj(Reloj reloj3) {
+    public Reloj diferenciaReloj(Reloj reloj) {
+        int totalDif = Math.abs(diferenciaMinutos(reloj));
+        int difHoras = totalDif / 60;
+        int difMinutos = totalDif % 60;
+        return new Reloj(difHoras, difMinutos);
     }
 }

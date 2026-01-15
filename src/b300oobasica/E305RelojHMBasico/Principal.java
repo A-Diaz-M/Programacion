@@ -1,8 +1,7 @@
 package b300oobasica.E305RelojHMBasico;
 
 public class Principal {
-
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Reloj reloj1 = new Reloj();
         Reloj reloj2 = new Reloj(150);
         Reloj reloj3 = new Reloj(3, 45);
