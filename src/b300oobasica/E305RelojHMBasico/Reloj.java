@@ -49,10 +49,10 @@ public class Reloj {
     }
 
     public int diferenciaMinutos(Reloj reloj) {
-        int thisMinutos = this.horas * 60 + this.minutos;
+        int thisMinutos = horas * 60 + minutos;
         int otroMinutos = reloj.horas * 60 + reloj.minutos;
 
-        return thisMinutos - otroMinutos;
+        return Math.abs(thisMinutos - otroMinutos);
     }
 
     public Reloj diferenciaReloj(Reloj reloj) {
