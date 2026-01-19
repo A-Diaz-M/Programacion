@@ -3,7 +3,7 @@ package b900programame;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class E909Kaprekar100 {
+public class E922Kaprekar100 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
