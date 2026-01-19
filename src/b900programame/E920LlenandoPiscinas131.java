@@ -4,33 +4,39 @@ import java.util.Scanner;
 
 public class E920LlenandoPiscinas131 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
 
         while (true) {
-            long p = sc.nextLong();
-            long b = sc.nextLong();
-            long l = sc.nextLong();
-            long pv = sc.nextLong();
-            long bv = sc.nextLong();
-            long lv = sc.nextLong();
+            int litrosPiscinaYo = entrada.nextInt();
+            int litrosBarrenioYo = entrada.nextInt();
+            int litrosPerdidosYo = entrada.nextInt();
 
-            // Fin de entrada
-            if (p == 0 || pv == 0) break;
+            int litrosPiscinaVecino = entrada.nextInt();
+            int litrosBarrenioVecino = entrada.nextInt();
+            int litrosPerdidosVecino = entrada.nextInt();
 
-            long viajesYo, viajesVecino;
-
-            long gananciaYo = b - l;
-            if (gananciaYo <= 0) {
-                viajesYo = Long.MAX_VALUE;
-            } else {
-                viajesYo = (p + gananciaYo - 1) / gananciaYo;
+            if (litrosPiscinaYo == 0 && litrosPiscinaVecino == 0) {
+                break;
             }
 
-            long gananciaVecino = bv - lv;
-            if (gananciaVecino <= 0) {
-                viajesVecino = Long.MAX_VALUE;
-            } else {
-                viajesVecino = (pv + gananciaVecino - 1) / gananciaVecino;
+            int capacidadYo = litrosBarrenioYo - litrosPerdidosYo;
+            int capacidadVecino = litrosBarrenioVecino - litrosPerdidosVecino;
+
+            int viajesYo = Integer.MAX_VALUE;
+            int viajesVecino = Integer.MAX_VALUE;
+
+            if (capacidadYo > 0) {
+                viajesYo = litrosPiscinaYo / capacidadYo;
+                if (litrosPiscinaYo % capacidadYo != 0) {
+                    viajesYo++;
+                }
+            }
+
+            if (capacidadVecino > 0) {
+                viajesVecino = litrosPiscinaVecino / capacidadVecino;
+                if (litrosPiscinaVecino % capacidadVecino != 0) {
+                    viajesVecino++;
+                }
             }
 
             if (viajesYo < viajesVecino) {
@@ -41,7 +47,5 @@ public class E920LlenandoPiscinas131 {
                 System.out.println("EMPATE " + viajesYo);
             }
         }
-
-        sc.close();
     }
 }
