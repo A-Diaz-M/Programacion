@@ -1,6 +1,6 @@
-package b300oobasica.E305RelojHMBasico;
+package b300oobasica.E307RelojTotalMinutosBasico;
 
-public class Principal {
+public class Main {
     static void main(String[] args) {
         Reloj reloj1 = new Reloj();
         Reloj reloj2 = new Reloj(150);
