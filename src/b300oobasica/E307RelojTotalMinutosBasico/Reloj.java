@@ -1,77 +1,73 @@
 package b300oobasica.E307RelojTotalMinutosBasico;
 
 public class Reloj {
-    int horas;
-    int minutos;
+    private int totalMinutos;
 
     public Reloj() {
-        conversor(495);
+        this(8, 15);
+    }
+
+    public Reloj(int horas, int min) {
+        this.totalMinutos = horas * 60 + min;
+        normalizar();
     }
 
     public Reloj(int totalMinutos) {
-        conversor(totalMinutos);
+        this.totalMinutos = totalMinutos;
+        normalizar();
     }
 
-    public Reloj(int h, int m) {
-        conversor((h * 60) + m);
+    public int getHoras() {
+        return totalMinutos / 60;
     }
 
-    public void conversor(int minutosTotales) {
-        horas = minutosTotales / 60;
-        minutos = minutosTotales % 60;
+    public int getMin() {
+        return totalMinutos % 60;
     }
 
-    @Override
     public String toString() {
-        return String.format("Formato 24h: %02d:%02d", horas, minutos);
+        return String.format("%02d:%02d", getHoras(), getMin());
+    }
+
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof Reloj)) return false;
+
+        Reloj otro = (Reloj) obj;
+        return this.totalMinutos == otro.totalMinutos;
+    }
+
+    public Reloj clone() {
+        return new Reloj(this.totalMinutos);
+    }
+
+    private void normalizar() {
+        totalMinutos = totalMinutos % 1440;
+
+        if (totalMinutos < 0) {
+            totalMinutos += 1440;
+        }
     }
 
     public void tick() {
         sumarMinutos(1);
     }
 
-    public void sumarMinutos(int m) {
-        int totalMinutos = horas * 60 + minutos;
-        totalMinutos += m;
-
-        totalMinutos = totalMinutos % 1440;
-
-        conversor(totalMinutos);
+    public void sumarMinutos(int minutos) {
+        totalMinutos += minutos;
+        normalizar();
     }
 
-    public void restarMinutos(int m) {
-        int totalMinutos = horas * 60 + minutos;
-        totalMinutos -= m;
-
-        totalMinutos = ((totalMinutos % 1440) + 1440) % 1440;
-
-        conversor(totalMinutos);
+    public void restarMinutos(int minutos) {
+        totalMinutos -= minutos;
+        normalizar();
     }
 
-    public int diferenciaMinutos(Reloj reloj) {
-        int thisMinutos = horas * 60 + minutos;
-        int otroMinutos = reloj.horas * 60 + reloj.minutos;
-
-        return Math.abs(thisMinutos - otroMinutos);
+    public int diferenciaMinutos(Reloj otro) {
+        return Math.abs(this.totalMinutos - otro.totalMinutos);
     }
 
-    public Reloj diferenciaReloj(Reloj reloj) {
-        int totalDif = Math.abs(diferenciaMinutos(reloj));
-        int difHoras = totalDif / 60;
-        int difMinutos = totalDif % 60;
-        return new Reloj(difHoras, difMinutos);
-    }
-
-    public Reloj clone() {
-        return new Reloj(this.horas, this.minutos);
-    }
-
-    public boolean equals(Object obj){
-        if(obj == null) return false;
-
-        if (!(obj instanceof Reloj)) return false;
-
-        Reloj otro = (Reloj) obj;
-        return ((this.horas == otro.horas) && (this.minutos == otro.minutos));
+    public Reloj diferenciaReloj(Reloj otro) {
+        return new Reloj(diferenciaMinutos(otro));
     }
 }
