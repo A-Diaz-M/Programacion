@@ -1,7 +1,6 @@
 package b300oobasica.E300ContadorBasico;
 
 public class Contador {
-
     private static final int MIN = 0;
     private static final int MAX = 100;
     private static final int RESET = 50;

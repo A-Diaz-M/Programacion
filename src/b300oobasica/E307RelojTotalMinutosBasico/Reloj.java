@@ -8,12 +8,11 @@ public class Reloj {
     }
 
     public Reloj(int horas, int min) {
-        this.totalMinutos = horas * 60 + min;
-        normalizar();
+        this(horas * 60 + min);
     }
 
     public Reloj(int totalMinutos) {
-        this.totalMinutos = totalMinutos;
+        setTotalMinutos(totalMinutos);
         normalizar();
     }
 
@@ -23,6 +22,10 @@ public class Reloj {
 
     public int getMin() {
         return totalMinutos % 60;
+    }
+
+    public void setTotalMinutos(int totalMinutos) {
+        this.totalMinutos = totalMinutos;
     }
 
     public String toString() {
@@ -54,12 +57,12 @@ public class Reloj {
     }
 
     public void sumarMinutos(int minutos) {
-        totalMinutos += minutos;
+        setTotalMinutos(totalMinutos += minutos);
         normalizar();
     }
 
     public void restarMinutos(int minutos) {
-        totalMinutos -= minutos;
+        setTotalMinutos(totalMinutos -= minutos);
         normalizar();
     }
 
@@ -68,6 +71,6 @@ public class Reloj {
     }
 
     public Reloj diferenciaReloj(Reloj otro) {
-        return new Reloj(diferenciaMinutos(otro));
+        return new Reloj(this.diferenciaMinutos(otro));
     }
 }

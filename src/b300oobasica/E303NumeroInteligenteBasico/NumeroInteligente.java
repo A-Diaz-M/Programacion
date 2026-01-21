@@ -1,10 +1,8 @@
 package b300oobasica.E303NumeroInteligenteBasico;
 
 public class NumeroInteligente {
-
     private int valor = 0;
     private int numeroPerfecto = 0;
-
 
     public NumeroInteligente (){
         valor = 1;

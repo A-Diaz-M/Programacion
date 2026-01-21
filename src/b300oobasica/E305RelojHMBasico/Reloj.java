@@ -1,8 +1,8 @@
 package b300oobasica.E305RelojHMBasico;
 
 public class Reloj {
-    int horas;
-    int minutos;
+    private int horas;
+    private int minutos;
 
     public Reloj() {
         conversor(495);
@@ -24,6 +24,19 @@ public class Reloj {
     @Override
     public String toString() {
         return String.format("Formato 24h: %02d:%02d", horas, minutos);
+    }
+
+    public Reloj clone() {
+        return new Reloj(this.horas, this.minutos);
+    }
+
+    public boolean equals(Object obj){
+        if(obj == null) return false;
+
+        if (!(obj instanceof Reloj)) return false;
+
+        Reloj otro = (Reloj) obj;
+        return ((this.horas == otro.horas) && (this.minutos == otro.minutos));
     }
 
     public void tick() {
@@ -60,18 +73,5 @@ public class Reloj {
         int difHoras = totalDif / 60;
         int difMinutos = totalDif % 60;
         return new Reloj(difHoras, difMinutos);
-    }
-
-    public Reloj clone() {
-        return new Reloj(this.horas, this.minutos);
-    }
-
-    public boolean equals(Object obj){
-        if(obj == null) return false;
-
-        if (!(obj instanceof Reloj)) return false;
-
-        Reloj otro = (Reloj) obj;
-        return ((this.horas == otro.horas) && (this.minutos == otro.minutos));
     }
 }
