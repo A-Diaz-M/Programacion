@@ -3,7 +3,6 @@ package b800varios;
 public class E821FactorialRecursivo {
 
     public static int factorial(int num) {
-
         int a = Math.abs(num);
 
         if (a == 0 || a == 1) {
