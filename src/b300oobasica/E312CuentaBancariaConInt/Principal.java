@@ -1,8 +1,8 @@
-package b300oobasica.E310CuentaBancaria;
+package b300oobasica.E312CuentaBancariaConInt;
 
 public class Principal {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         Cuenta cuenta1 = new Cuenta(50);
 

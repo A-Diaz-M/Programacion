@@ -1,41 +1,44 @@
-package b300oobasica.E310CuentaBancaria;
+package b300oobasica.E312CuentaBancariaConInt;
 
 public class Cuenta implements Cloneable {
 
-    private double saldo;
-    private final double descubiertoMaximo;
+    private int saldo;
+    private final int descubiertoMaximo;
 
     public Cuenta(double saldoInicial) {
-        this.saldo = saldoInicial;
+        this.saldo = (int) Math.round(saldoInicial * 100);
         this.descubiertoMaximo = 0;
     }
 
     public Cuenta(double saldoInicial, double descubiertoMaximo) {
-        this.saldo = saldoInicial;
-        this.descubiertoMaximo = descubiertoMaximo;
+        this.saldo = (int) Math.round(saldoInicial * 100);
+        this.descubiertoMaximo = (int) Math.round(descubiertoMaximo * 100);
     }
 
     public void ingresarCajero(double cantidad) {
-        saldo += cantidad;
+        int centimos = (int) Math.round(cantidad * 100);
+        saldo += centimos;
     }
 
     public void extraerCajero(double cantidad) {
-        if (saldo - cantidad < 0) {
+        int centimos = (int) Math.round(cantidad * 100);
+        if (saldo - centimos < 0) {
             throw new RuntimeException("Saldo insuficiente");
         }
-        saldo -= cantidad;
+        saldo -= centimos;
     }
 
     public void cargarRecibo(double cantidad) {
-        if (saldo - cantidad < -descubiertoMaximo) {
+        int centimos = (int) Math.round(cantidad * 100);
+        if (saldo - centimos < -descubiertoMaximo) {
             throw new RuntimeException("Descubierto máximo superado");
         }
-        saldo -= cantidad;
+        saldo -= centimos;
     }
 
     @Override
     public String toString() {
-        return "Cuenta saldo = " + saldo;
+        return "Cuenta saldo = " + (saldo / 100.0);
     }
 
     @Override
@@ -47,6 +50,6 @@ public class Cuenta implements Cloneable {
 
     @Override
     public Cuenta clone() {
-        return new Cuenta(this.saldo, this.descubiertoMaximo);
+        return new Cuenta(this.saldo / 100.0, this.descubiertoMaximo / 100.0);
     }
 }
