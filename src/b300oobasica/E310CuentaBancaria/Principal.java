@@ -1,11 +1,8 @@
 package b300oobasica.E310CuentaBancaria;
 
 public class Principal {
-
     public static void main(String[] args) {
-
         Cuenta cuenta1 = new Cuenta(50);
-
         Cuenta cuenta2 = new Cuenta(50, 70);
 
         cuenta1.ingresarCajero(20);
