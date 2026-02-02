@@ -20,14 +20,14 @@ public class Cuenta implements Cloneable {
     }
 
     public void extraerCajero(double cantidad) {
-        if (saldo - cantidad < 0) {
+        if ((saldo - cantidad) < 0) {
             throw new RuntimeException("Saldo insuficiente");
         }
         saldo -= cantidad;
     }
 
     public void cargarRecibo(double cantidad) {
-        if (saldo - cantidad < -descubiertoMaximo) {
+        if ((saldo - cantidad) < -descubiertoMaximo) {
             throw new RuntimeException("Descubierto máximo superado");
         }
         saldo -= cantidad;
