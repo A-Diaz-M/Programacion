@@ -1,4 +1,4 @@
-package b300oobasica.E320GlobosExplosivos;
+package b300oobasica.E322GlobosExplosivosFase3ConArrayList;
 
 import java.util.Random;
 

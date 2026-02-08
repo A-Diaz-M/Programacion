@@ -1,8 +1,10 @@
-package b300oobasica.E320GlobosExplosivos;
+package b300oobasica.E322GlobosExplosivosFase3ConArrayList;
 
-import java.util.Scanner;
-import java.util.Random;
+import b300oobasica.E320GlobosExplosivos.Globo;
+
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Principal {
     static void main(String[] args) {
@@ -12,7 +14,7 @@ public class Principal {
         final int MAX_RONDAS = 5;
         final int VICTORIAS_PARA_GANAR = 3;
 
-        ArrayList<Globo> globos = new ArrayList<>();
+        ArrayList<b300oobasica.E320GlobosExplosivos.Globo> globos = new ArrayList<>();
 
         int victoriasJ1 = 0;
         int victoriasJ2 = 0;
@@ -26,7 +28,7 @@ public class Principal {
 
             System.out.println("\n--- RONDA " + (ronda + 1) + " ---");
 
-            Globo globo = new Globo();
+            b300oobasica.E320GlobosExplosivos.Globo globo = new Globo();
             globos.add(globo);
 
             int jugadorActual = 1;
