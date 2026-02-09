@@ -14,7 +14,7 @@ public class Principal {
         final int MAX_RONDAS = 5;
         final int VICTORIAS_PARA_GANAR = 3;
 
-        ArrayList<b300oobasica.E320GlobosExplosivos.Globo> globos = new ArrayList<>();
+        ArrayList<Globo> globos = new ArrayList<>();
 
         int victoriasJ1 = 0;
         int victoriasJ2 = 0;
@@ -28,7 +28,7 @@ public class Principal {
 
             System.out.println("\n--- RONDA " + (ronda + 1) + " ---");
 
-            b300oobasica.E320GlobosExplosivos.Globo globo = new Globo();
+            Globo globo = new Globo();
             globos.add(globo);
 
             int jugadorActual = 1;
