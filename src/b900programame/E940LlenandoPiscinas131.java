@@ -2,7 +2,7 @@ package b900programame;
 
 import java.util.Scanner;
 
-public class E920LlenandoPiscinas131 {
+public class E940LlenandoPiscinas131 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 

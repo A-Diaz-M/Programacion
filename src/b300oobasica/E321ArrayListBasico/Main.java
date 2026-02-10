@@ -24,8 +24,8 @@ public class Main {
 
             System.out.printf("La lista1 contiene el número 50?: %b%n", lista1.contains(50));
 
-            lista1.remove(new Integer(43));
-            lista1.remove(Integer.valueOf(43)); // Hace lo mismo que el anterior.
+            lista1.remove(new Integer(43)); //mejor
+            lista1.remove(Integer.valueOf(43));
 
             System.out.printf("La lista1 tiene el número 43?: %b%n", lista1.contains(43));
 
