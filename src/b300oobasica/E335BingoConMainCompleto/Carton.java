@@ -1,4 +1,4 @@
-package b300oobasica.E332BingoBomboYCarton;
+package b300oobasica.E335BingoConMainCompleto;
 
 import java.util.ArrayList;
 
