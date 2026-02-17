@@ -15,7 +15,6 @@ void main() {
 
     for (int i = 0; i < caracteres.length; i++){
         char caracter = (char) (97 + i);
-
-        IO.println(String.format("La letra '%s' esta un total: %d", (caracter), caracteres[i]));
+        IO.println(String.format("Letra '%s' -> "+ "*".repeat(caracteres[i]), (caracter)));
     }
 }
