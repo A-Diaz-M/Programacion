@@ -5,8 +5,6 @@ public abstract class Reloj {
     protected int horas;
     protected int minutos;
 
-    // ── Constructores ──────────────────────────────────────────────────────────
-
     public Reloj() {
         this(8, 15);
     }
@@ -19,12 +17,9 @@ public abstract class Reloj {
         setTotalMinutos(totalMinutos);
     }
 
-    // ── Getters / Setters ──────────────────────────────────────────────────────
-
     public int getHoras()   { return horas; }
     public int getMinutos() { return minutos; }
 
-    /** Establece el tiempo normalizando el total de minutos dado. */
     protected void setTotalMinutos(int total) {
         total = total % 1440;
         if (total < 0) total += 1440;
@@ -32,20 +27,15 @@ public abstract class Reloj {
         this.minutos = total % 60;
     }
 
-    /** Establece el tiempo a partir de horas y minutos (normaliza). */
     private void setTiempo(int h, int m) {
         setTotalMinutos(h * 60 + m);
     }
-
-    // ── Métodos abstractos ─────────────────────────────────────────────────────
 
     @Override
     public abstract String toString();
 
     @Override
     public abstract Reloj clone();
-
-    // ── Métodos concretos ──────────────────────────────────────────────────────
 
     @Override
     public boolean equals(Object obj) {
@@ -72,10 +62,6 @@ public abstract class Reloj {
         return Math.abs(thisTotal - otroTotal);
     }
 
-    /**
-     * Devuelve la diferencia como un Reloj del mismo tipo concreto que
-     * el receptor, clonando y ajustando el total de minutos.
-     */
     public Reloj diferenciaReloj(Reloj otro) {
         Reloj r = this.clone();
         r.setTotalMinutos(this.diferenciaMinutos(otro));

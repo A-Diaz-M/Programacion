@@ -12,7 +12,6 @@ public class RelojIngles extends RelojTextual {
         "", "", "twenty", "thirty", "forty", "fifty"
     };
 
-    // ── Constructores ──────────────────────────────────────────────────────────
 
     public RelojIngles() { super(); }
 
@@ -20,7 +19,6 @@ public class RelojIngles extends RelojTextual {
 
     public RelojIngles(int totalMinutos) { super(totalMinutos); }
 
-    // ── Helpers ────────────────────────────────────────────────────────────────
 
     @Override
     protected String numeroTexto(int n) {
