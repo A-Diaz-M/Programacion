@@ -1,11 +1,10 @@
-package b400ooavanz.E420InterfazParlante;
+package b400ooavanz.E410Animales;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Principal {
     public static void main(String[] args) {
-        List lista  = new ArrayList();
         List<Animal> animales = new ArrayList<>();
         animales.add(new Gato("Garfield", 20));
         animales.add(new Perro("Pluto"));

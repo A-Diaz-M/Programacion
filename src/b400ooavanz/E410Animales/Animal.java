@@ -1,4 +1,4 @@
-package b400ooavanz.E420InterfazParlante;
+package b400ooavanz.E410Animales;
 
 public abstract class Animal {
     public static final int ENERGIA_POR_DEFECTO = 100;

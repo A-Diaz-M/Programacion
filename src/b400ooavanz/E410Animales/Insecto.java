@@ -1,4 +1,4 @@
-package b400ooavanz.E420InterfazParlante;
+package b400ooavanz.E410Animales;
 
 public abstract class Insecto extends Animal {
     public static final int GASTO_POR_HABLAR = 1;

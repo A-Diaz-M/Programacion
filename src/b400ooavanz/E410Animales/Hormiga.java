@@ -1,4 +1,4 @@
-package b400ooavanz.E420InterfazParlante;
+package b400ooavanz.E410Animales;
 
 public class Hormiga extends Insecto {
     public static final int APROVECHAMIENTO_COMIDA = 4;
