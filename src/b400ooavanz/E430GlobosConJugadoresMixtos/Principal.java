@@ -13,16 +13,16 @@ public class Principal {
         // jugadores.add(new JugadorHumano("J2"));
 
         // HC → humano vs cpu  (configuración por defecto)
-        jugadores.add(new JugadorHumano("J1-Humano"));
-        jugadores.add(new JugadorCpu("J2-CPU"));
+        //jugadores.add(new JugadorHumano("J1-Humano"));
+        //jugadores.add(new JugadorCpu("J2-CPU"));
 
         // CH → cpu primero
         // jugadores.add(new JugadorCpu("J1-CPU"));
         // jugadores.add(new JugadorHumano("J2-Humano"));
 
         // CC → dos cpus
-        // jugadores.add(new JugadorCpu("CPU-1"));
-        // jugadores.add(new JugadorCpu("CPU-2"));
+         jugadores.add(new JugadorCpu("CPU-1"));
+         jugadores.add(new JugadorCpu("CPU-2"));
 
         // N jugadores → simplemente añade más:
         // jugadores.add(new JugadorHumano("J3-Humano"));
