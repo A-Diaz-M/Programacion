@@ -6,13 +6,13 @@ public class Juego {
     private final Tablero tablero;
     private final Jugador jugador1;
     private final Jugador jugador2;
-    private final Scanner sc;
+    private final Scanner teclado;
 
     public Juego(int filas, int columnas) {
         this.tablero = new Tablero(filas, columnas);
         this.jugador1 = new Jugador(1, "Jugador 1", "[X]");
         this.jugador2 = new Jugador(2, "Jugador 2", "[O]");
-        this.sc = new Scanner(System.in);
+        this.teclado = new Scanner(System.in);
     }
 
     public void iniciar() {
@@ -24,8 +24,8 @@ public class Juego {
             seguirJugando = preguntarRevancha();
         }
 
-        System.out.println("\n¡Hasta la próxima! 👋");
-        sc.close();
+        System.out.println("\n¡Hasta la próxima!");
+        teclado.close();
     }
 
     private void jugarPartida() {
@@ -37,7 +37,7 @@ public class Juego {
 
         while (!finalizado) {
 
-            // Pista 3: el jugador solo indica la columna
+            // El jugador solo indica la columna
             int col = pedirColumna(turnoActual, tableroPartida);
 
             // Colocar ficha y obtener la fila donde cayó (Pista 2)
@@ -68,8 +68,8 @@ public class Juego {
         while (!valida) {
             System.out.print("  " + jugador + ", elige columna (1-" + t.getColumnas() + "): ");
 
-            if (sc.hasNextInt()) {
-                int entrada = sc.nextInt();
+            if (teclado.hasNextInt()) {
+                int entrada = teclado.nextInt();
                 col = entrada - 1; // Convertir a índice 0-based
 
                 if (!estaEnRango(col, t.getColumnas())) {
@@ -81,7 +81,7 @@ public class Juego {
                 }
             } else {
                 System.out.println("  ⚠  Entrada inválida. Introduce un número.");
-                sc.next(); // Descartar token no numérico
+                teclado.next(); // Descartar token no numérico
             }
         }
         return col;
@@ -93,7 +93,7 @@ public class Juego {
 
     private boolean preguntarRevancha() {
         System.out.print("\n¿Queréis jugar otra partida? (s/n): ");
-        String respuesta = sc.next().trim().toLowerCase();
+        String respuesta = teclado.next().trim().toLowerCase();
         return respuesta.equals("s") || respuesta.equals("si") || respuesta.equals("sí");
     }
 
@@ -101,10 +101,10 @@ public class Juego {
         System.out.println("╔══════════════════════════════╗");
         System.out.println("║      CONECTA CUATRO  🔴🟡    ║");
         System.out.println("╠══════════════════════════════╣");
-        System.out.printf("║  Tablero: %2d filas x %2d cols  ║%n",
+        System.out.printf ("║  Tablero: %2d filas x %2d cols ║%n",
                 tablero.getFilas(), tablero.getColumnas());
-        System.out.println("║  " + jugador1 + "               ║");
-        System.out.println("║  " + jugador2 + "               ║");
+        System.out.println("║  " + jugador1 + "             ║");
+        System.out.println("║  " + jugador2 + "             ║");
         System.out.println("╚══════════════════════════════╝");
         System.out.println();
     }
