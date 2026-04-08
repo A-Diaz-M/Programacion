@@ -49,7 +49,7 @@ public class Principal {
 
             Jugador perdedor = jugadores.get(jugadorActual);
             perdedor.quitarUnaVida();
-            System.out.printf("  💥 ¡El globo ha explotado! %s pierde una vida.\n", perdedor.getNombre());
+            System.out.printf("¡El globo ha explotado! %s pierde una vida.\n", perdedor.getNombre());
 
             if (!perdedor.estaVivo()) {
                 jugadoresVivos--;
@@ -58,7 +58,7 @@ public class Principal {
 
         } while (jugadoresVivos > 1);
 
-        // Ordenar de mayor a menor puntuación
+        // Ordenar de mayor a menor puntuación0
         jugadores.sort(Comparator.reverseOrder());
 
         System.out.printf("\n\n\n---------- FINAL DEL JUEGO TRAS %d RONDAS ----------\n", ronda);
