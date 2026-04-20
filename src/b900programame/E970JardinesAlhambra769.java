@@ -7,13 +7,12 @@ public class E970JardinesAlhambra769 {
     static char[][] mapa;
     static int filas, cols;
 
-    // Flood fill iterativo (pila explícita para evitar StackOverflow)
     static void rellenar(int f, int c) {
         int[] pf = new int[filas * cols];
         int[] pc = new int[filas * cols];
         int top = 0;
 
-        mapa[f][c] = '.'; // marcar visitado antes de meter en pila
+        mapa[f][c] = '.';
         pf[top] = f;
         pc[top] = c;
         top++;
@@ -30,7 +29,7 @@ public class E970JardinesAlhambra769 {
                 int nf = rf + df[d];
                 int nc = rc + dc[d];
                 if (nf >= 0 && nf < filas && nc >= 0 && nc < cols && mapa[nf][nc] == '#') {
-                    mapa[nf][nc] = '.'; // marcar antes de apilar (evita duplicados)
+                    mapa[nf][nc] = '.';
                     pf[top] = nf;
                     pc[top] = nc;
                     top++;
@@ -61,7 +60,5 @@ public class E970JardinesAlhambra769 {
 
             System.out.println(cortacespedes);
         }
-
-        sc.close();
     }
 }
