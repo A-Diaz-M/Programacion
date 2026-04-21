@@ -4,14 +4,13 @@ import java.io.*;
 import java.util.Scanner;
 
 public class E805AnillamientoConFicheros {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Scanner entrada = null;
         PrintWriter salida = null;
 
         try {
             entrada = new Scanner(new BufferedReader(new FileReader("src/b800varios/E805AnillamientoConFicheros/entrada.txt")));
             salida = new PrintWriter(new BufferedWriter(new FileWriter("src/b800varios/E805AnillamientoConFicheros/salida.txt")));
-
             int campanna;
 
             while (entrada.hasNextInt()) {
@@ -25,10 +24,8 @@ public class E805AnillamientoConFicheros {
                     int reg = entrada.nextInt();
                     totales += (capt - reg);
                 }
-
                 salida.println(totales);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
